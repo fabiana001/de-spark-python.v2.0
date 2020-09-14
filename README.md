@@ -5,42 +5,42 @@ Below is the project structure
 
       Pyspark Project/
         │
-		├── project_name/
-		        │
-				├── function1/
-				├── function2/
-				├── start/
-				        │
-						├── __inti__.py
-						└── main.py
-				├── __init__.py
-				└── driver.py
-		├── resources/
-		        │
-				├── data/
-						│
-						├── Dockerfile/
-						├── config.yaml
-						└── generate.sh
-				├── generated_data/
-				└── application.conf
-		├── tests/
-		        │
-				├── function1/
-				        │
-						└── test1.py
-				├── function2/
-				        │
-						└── test2.py
-				├── __init__.py
-				└── conftest.py
-		├── .coveragerc
-		├── .gitignore
-		├── setup.py
-		├── requirements.txt
-		├── test_requirements
-		└── README.md
-		
+	├── project_name/
+	     │
+             ├── function1/
+	     ├── function2/
+	     ├── start/
+		   │
+		   ├── __inti__.py
+		   └── main.py
+	     ├── __init__.py
+	     └── driver.py
+	├── resources/
+	     │
+	     ├── data/
+		  │
+		  ├── Dockerfile/
+		  ├── config.yaml
+		  └── generate.sh
+	     ├── generated_data/
+	     └── application.conf
+	├── tests/
+             │
+	     ├── function1/
+	          │
+		  └── test1.py
+	     ├── function2/
+		  │
+		  └── test2.py
+	     ├── __init__.py
+	     └── conftest.py
+	├── .coveragerc
+	├── .gitignore
+	├── setup.py
+	├── requirements.txt
+	├── test_requirements
+	└── README.md
+
 
 Generate Fake Data :
 
