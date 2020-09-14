@@ -1,0 +1,8 @@
+venv/
+*.egg-info/
+dist/
+.idea/
+*.iml
+build/
+spark_dist/
+.eggs/
