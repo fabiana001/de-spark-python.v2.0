@@ -5,41 +5,41 @@ Below is the project structure
 
       Pyspark Project/
         │
-	├── project_name/
-	     │
-             ├── function1/
-	     ├── function2/
-	     ├── start/
-		   │
-		   ├── __inti__.py
-		   └── main.py
-	     ├── __init__.py
-	     └── driver.py
-	├── resources/
-	     │
-	     ├── data/
-		  │
-		  ├── Dockerfile/
-		  ├── config.yaml
-		  └── generate.sh
-	     ├── generated_data/
-	     └── application.conf
-	├── tests/
+	    ├── project_name/
+	    │
+				 ├── function1/
+				 ├── function2/
+				 ├── start/
+				 │
+				 ├── __inti__.py
+				 └── main.py
+			├── __init__.py
+	        └── driver.py
+	    ├── resources/
+	    │
+	    ├── data/
+			  │
+			  ├── Dockerfile/
+			  ├── config.yaml
+			  └── generate.sh
+			├── generated_data/
+			└── application.conf
+	    ├── tests/
              │
-	     ├── function1/
-	          │
-		  └── test1.py
-	     ├── function2/
-		  │
-		  └── test2.py
-	     ├── __init__.py
-	     └── conftest.py
-	├── .coveragerc
-	├── .gitignore
-	├── setup.py
-	├── requirements.txt
-	├── test_requirements
-	└── README.md
+	         ├── function1/
+	           │
+		       └── test1.py
+	         ├── function2/
+		     │
+		     └── test2.py
+	        ├── __init__.py
+	        └── conftest.py
+	    ├── .coveragerc
+	    ├── .gitignore
+	    ├── setup.py
+	    ├── requirements.txt
+	    ├── test_requirements
+	    └── README.md
 
 
 Generate Fake Data :
@@ -69,6 +69,14 @@ To create artifacts:
 Command to submit :
 
 spark-submit --py-files=package.zip,package-dep.zip driver.py --region=local --configFile=resources/appilcation.conf
+
+
+with customized log4j
+
+spark-submit --files log4j.properties --conf "spark.executor.extraJavaOptions=-Dlog4j.configuration=file:lo
+g4j.properties" --conf "spark.driver.extraJavaOptions=-Dlog4j.configuration=file:log4j.properties" --conf "spark.executor.extraJavaOptions=-Dlog4j.configuration=file:lo
+g4j.properties" --py-files=project_name-0.1.zip,project_name-0.1-deps.zip driver.py --region=local --configFile=C:\work\pysparkTemplate\de-spark-python.v2.0\resources\a
+pplication.conf  
 
 
 Testing :
