@@ -1,12 +1,3 @@
-## Joining Dataframes
-
-```python
-
-join(dfs:List[DataFrame],cols:List[Tuple[columnsToJoin]],joinType:List[str]) -> DataFrame 
-
-ex : join([df1,df2],[(col1a,col2a),(col1b,col2b)],["inner"])
-```
-
 # Pyspark Bootstrap 
 
 ### Below is the project structure 
