@@ -107,8 +107,7 @@ use pytest.ini to configure pytest
 use coveragerc to config the coverages to run during pytest
 
 command : 
-```bash
-// code for coloring
+```console
 pytest --cov-report html --cov=project_name  --html=Reports\pytest.html
 ```
 
