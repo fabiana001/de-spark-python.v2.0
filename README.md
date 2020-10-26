@@ -2,7 +2,7 @@
 
 ### Below is the project structure 
 
-```powershell
+```console
 . 
 ├── Dockerfile 
 ├── README.md
@@ -61,7 +61,7 @@
 ## Generate Fake Data :
 
 To Generate data in docker container and move it back to host manually
-```powershell
+```console
 docker build -t python-fake-data .
 
 docker run -it python-fake-data
@@ -78,20 +78,20 @@ just run the shell script generate.sh ./generate.sh in the data director
 
 ### To create artifacts:
  Run below command to generate artifacts
-```powershell
+```console
 python setup.py bdist_spark 
 ```
 The above will zip the package dependencies and package it self as zip files.
 To call our main program we will use [driver.py](https://github.com/krishnanaredla/de-spark-python.v2.0/blob/master/project_name/driver.py)  file which will be generic
 	 
 ### Command to submit :
-```powershell
+```console
 spark-submit --py-files=package.zip,package-dep.zip driver.py --region=local --configFile=resources/appilcation.conf
 ```
 
 ### with customized log4j
 
-```powershell
+```console
 spark-submit --files log4j.properties --conf "spark.executor.extraJavaOptions=-Dlog4j.configuration=file:lo
 g4j.properties" --conf "spark.driver.extraJavaOptions=-Dlog4j.configuration=file:log4j.properties" --conf "spark.executor.extraJavaOptions=-Dlog4j.configuration=file:lo
 g4j.properties" --py-files=project_name-0.1.zip,project_name-0.1-deps.zip driver.py --region=local --configFile=C:\work\pysparkTemplate\de-spark-python.v2.0\resources\a
@@ -107,7 +107,7 @@ use pytest.ini to configure pytest
 use coveragerc to config the coverages to run during pytest
 
 command : 
-```powershell
+```console
 pytest --cov-report html --cov=project_name  --html=Reports\pytest.html
 ```
 
