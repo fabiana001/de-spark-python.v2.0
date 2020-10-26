@@ -3,37 +3,59 @@
 ### Below is the project structure 
 
 ```tree
-      Pyspark Project/
-        │
-	    ├── project_name/
-             ├── function1/
-		     ├── function2/
-			 ├── start/
-				 ├── __inti__.py
-				 └── main.py
-			 ├── __init__.py
-	         └── driver.py
-	    ├── resources/
-	         ├── data/
-    			 ├── Dockerfile/
-    			 ├── config.yaml
-    			 └── generate.sh
-			 ├── generated_data/
-			 └── application.conf
-	    ├── tests/
-             │
-	         ├── function1/
-		         └── test1.py
-	         ├── function2/
-		         └── test2.py
-	         ├── __init__.py
-	         └── conftest.py
-	    ├── .coveragerc
-	    ├── .gitignore
-	    ├── setup.py
-	    ├── requirements.txt
-	    ├── test_requirements
-	    └── README.md
+. 
+├── Dockerfile 
+├── README.md
+├── build.sh
+├── dependencies 
+│   ├── AccumLogger
+│   │   ├── __init__.py 
+│   │   ├── builder.py 
+│   │   └── logger.py
+│   ├── Config
+│   │   ├── __init__.py 
+│   │   └── typeSafe.py
+│   ├── SparkSessionBuilder
+│   │   ├── __init__.py
+│   │   └── getSession.py
+│   └── __init__.py 
+├── docker-logs
+│   ├── README.md
+│   ├── docker-compose.yml
+│   └── filebeat.yml
+├── feature_engineering 
+│   ├── __init__.py
+│   ├── feature_tools.py
+│   └── feature_tools_supplement.py
+├── log4j.properties
+├── project_name 
+│   ├── __init__.py
+│   ├── driver.py
+│   ├── start 
+│   │   ├── __init__.py
+│   │   └── main.py
+│   ├── transformations
+│   │   ├── __init__.py
+│   │   └── func1.py
+│   └── otherFunctions
+│       ├── __init__.py
+│       └── func2.py
+├── pytest.ini
+├── requirements.txt
+├── resources 
+│   ├── application.conf
+│   └── data 
+│       ├── Dockerfile
+│       ├── config.yaml
+│       └── generate.sh
+├── setup.py
+├── test.sh 
+├── test_requirements.txt
+└── tests 
+    ├── __init__.py
+    ├── conftest.py
+    └── transformations
+        └── func1_test.py 
 ```
 
 ## Generate Fake Data :
